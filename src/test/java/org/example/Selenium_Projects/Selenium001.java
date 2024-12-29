@@ -19,7 +19,7 @@ public class Selenium001 {
         webdriver.findElement(By.id("details-button")).click();
         webdriver.findElement(By.id("proceed-link")).click();
         WebElement username=webdriver.findElement(By.id("username"));
-        username.sendKeys("hclr@hcl.com");
+        username.sendKeys("hclr@ac.com");
         webdriver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[1]/div/div[1]/div[2]/div/button")).click();
         username.sendKeys(Keys.RETURN);
         WebElement password=webdriver.findElement(By.id("password"));
