@@ -6,6 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.Test;
+
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.*;
 
 public class Selenium_Second_Project {
@@ -36,10 +39,15 @@ public class Selenium_Second_Project {
         profession.click();
         WebElement tools = edgeDriver.findElement(By.id("tool-2"));
         tools.click();
+        WebElement continents = edgeDriver.findElement(By.xpath("/html/body/div/div/div[25]/div[2]/select"));
+        continents.click();
+        WebElement continentsselection = edgeDriver.findElement(By.xpath("/html/body/div/div/div[25]/div[2]/select/option[6]"));
+        continentsselection.click();
+        WebElement selecomm = edgeDriver.findElement(By.xpath("/html/body/div/div/div[27]/div[2]/select/option[4]"));
+        selecomm.click();
 
-
-        //assertThat(edgeDriver.getCurrentUrl()).isEqualTo("https://katalon-demo-cura.herokuapp.com/#appointment");
-        //System.out.println(edgeDriver.getCurrentUrl());
+        //WebElement file = edgeDriver.findElement(By.id("photo"));
+        //file.click();
 
         Thread.sleep(3000);
         edgeDriver.quit();
