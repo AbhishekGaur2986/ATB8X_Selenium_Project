@@ -7,6 +7,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
@@ -46,8 +47,11 @@ public class Selenium_Second_Project {
         WebElement selecomm = edgeDriver.findElement(By.xpath("/html/body/div/div/div[27]/div[2]/select/option[4]"));
         selecomm.click();
 
-        //WebElement file = edgeDriver.findElement(By.id("photo"));
-        //file.click();
+        WebElement file = edgeDriver.findElement(By.xpath("//*[@id=\"photo\"]"));
+        file.sendKeys("C:\\Users\\gaur.abhishek\\OneDrive - HCL TECHNOLOGIES LIMITED\\Desktop\\Desktop Data\\dsk top\\Bck_up_2Jan25\\Signature.jpg");
+
+        WebElement download_file = edgeDriver.findElement(By.xpath("/html/body/div/div/div[28]/div[2]/div/a"));
+        download_file.click();
 
         Thread.sleep(3000);
         edgeDriver.quit();
